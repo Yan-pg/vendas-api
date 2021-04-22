@@ -21,7 +21,16 @@ class User {
   password: string;
 
   @Column()
+  lastMessage: string;
+
+  @Column()
+  lastTime: string;
+
+  @Column()
   avatar: string;
+
+  @Column()
+  online: boolean;
 
   @CreateDateColumn()
   created_at: Date;

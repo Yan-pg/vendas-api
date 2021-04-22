@@ -1,3 +1,4 @@
+import { boolean } from 'joi';
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export default class CreateUser1610161774117 implements MigrationInterface {
@@ -27,8 +28,24 @@ export default class CreateUser1610161774117 implements MigrationInterface {
             type: 'varchar',
           },
           {
+            name: 'lastMessage',
+            type: 'varchar',
+            isNullable: true,
+          },
+          {
+            name: 'lastTime',
+            type: 'varchar',
+            isNullable: true,
+          },
+          {
             name: 'avatar',
             type: 'varchar',
+            isNullable: true,
+          },
+          {
+            name: 'online',
+            type: 'boolean',
+            default: false,
             isNullable: true,
           },
           {
